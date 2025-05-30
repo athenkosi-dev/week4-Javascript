@@ -333,5 +333,39 @@ function getWeatherAdvice() {
         </script>
     </div>
     <br></br>
+
+    <!-- Lesson 15 -->
+     <div class="lesson">
+        <h2>Lesson 15: Numbers and Strings Part 3 - Avoiding Conversion Errors</h2>
+        <p><strong>Concept:</strong> Handling conversion errors and invalid input</p>
+
+        <input type="text" id="safeInput1" placeholder="Enter first number">
+        <input type="text" id="safeInput2" placeholder="Enter second number">
+        <button onclick="safeConvertAndAdd()">Safe Convert and Add</button>
+        <div class="output" id="safeOutput">Try entering both number and non-numbers 
+            for error handling</div>
+        
+        <script>
+            function safeConvertAndAdd() {
+                var input1 = document.getElementById("safeInput1").value;
+                var input2 = document.getElementById("safeInput2").value;
+
+                var num1 = parseInt(input1);
+                var num2 = parseInt(input2);
+
+                if (isNaN(num1) || isNaN(num2)) {
+                    document.getElementById("safeOutput").innerHTML = 
+                        "Error: Please enter valid numbers only!<br>" +
+                        "Input 1: '" + input1 + "' → " + (isNaN(num1) ? "Invalid" : "Valid") + "<br>" +
+                        "Input 2: '" + input2 + "' → " + (isNaN(num2) ? "Invalid" : "Valid");
+                } else {
+                    document.getElementById("safeOutput").innerHTML = 
+                        "Success! " + num1 + " + " + num2 + " = " + (num1 + num2)
+                }
+            }
+
+
+        </script>
+     </div>
 </body>
 </html>
