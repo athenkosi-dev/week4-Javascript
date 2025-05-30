@@ -24,11 +24,12 @@
             }
         </script>
     </div>
+    <br></br>
     <!--Lesson2-->
     <div class="lesson">
         <h2>Lesson 2: Variable (Text Storage)</h2>
 
-        <h2 id"heading2">Text will Change</h2>
+        <h2 id="heading2">Text will Change</h2>
         <p id="text2">More text here</p>
         <button onclick="lesson2()">Use Variables</button>
         <script>
@@ -43,6 +44,7 @@
             }
         </script>
     </div>
+    <br></br>
     <!--Lesson3-->
     <div class="lesson">
         <h3>Lesson 3: Variables (Numbers)</h3>
@@ -59,9 +61,7 @@
             }
         </script>
     </div>
-    </script>
-    </div>
-
+    <br></br>
     <!--Lesson4-->
     <div class="lesson">
         <h3>Lesson4: If/Else Decision (conditionals)</h3>
@@ -82,14 +82,14 @@
 
         </script>
     </div>
-
+    <br></br>
     <!--Lesson5-->
-    <div class="lesson5" Click event>
+    <div class="lesson5">
 
         <h2 onclick="this.innerHTML='is awesome' ">JavaScript</h2>
         <p>Click on the word "JavaScript"above.</p>
     </div>
-
+    <br></br>
     <!--Lesson6-->
     <div class="lesson">
         <h3>Lesson6: Toggle Fuctions</h3>
@@ -108,7 +108,7 @@
             }
         </script>
     </div>
-
+    <br></br>
     <!--Lesson7-->
     <div class="lesson7">
         <h2>Lesson7: Fuctions parameters</h2>
@@ -129,7 +129,7 @@
         </script>
 
     </div>
-
+    <br></br>
     <!--Lesson8-->
     <div class="lesson">
         <h2>Lesson8: Fuctions Return</h2>
@@ -147,7 +147,7 @@
             }
         </script>
     </div>
-
+    <br></br>
     <!--Lesson9-->
     <div class="lesson">
         <h2>Lesson9: Variables Scopes</h2>
@@ -176,9 +176,7 @@
           }
         </script>
     </div>
-
-
-
+    <br></br>
     <!--Lesson10-->
    <div class="lesson10">
    <h2>Lesson 10: Mini Project - login form part 1</h2>
@@ -205,18 +203,13 @@
         }
     </script>
    </form>
-
+   </div>
+   <br></br>
 <!--Lesson 11-->
-<div class"lesson>
+<div class="lesson">
     <h2>Lesson 11:    </h2>
     <p><strong>Concept:</strong>Complete login verification with functions.</p>
     <p><em>Try username: AppAcademy, password:12@xademy</em></p>
-
-    <form>
-       
-    </form>
-
-    <div class="output" id="message11">Enter username and password, then click button</div>
 
     <form>
         <label for="usernameInput11">Username:</label>
@@ -226,9 +219,8 @@
         <input type="password" id="passwordInput11"/> <br><br />
 
         <button type="button"onclick="verify11()">Verify Login</button>
-
     </form>
-<div class="output" id="message11">Enter username and password, then click button</div>
+    <div class="output" id="message11">Enter username and password, then click button</div>
 
 <script>
     function verify11() {
@@ -248,6 +240,47 @@
         }
     }
 </script>
+</div>
+<br></br>
+<!--Lesson 12-->
+<div class="lesson">
+<h2>Lesson 12: The SWITCH statement</h2>
+<p><strong>Concept:</strong>Using SWITCH for multiple conditions</p>
 
+<label for="weather12">select weather</label>
+<select id="weather12">
+    <option value="sunny">Sunny</option>
+    <option value="rainy">Rainy</option>
+    <option value="snowy">Snowy</option>
+    <option value="cloudy">Cloudy</option>
+    </select>
+    <button onclick="getWeather()">Get Advice</button>
+    <div class="output" id="advice12">Select weather and click for advice </div>
+<script>
+function getWeatherAdvice() {
+    var weather = document.getElementById("weather12").value;
+    let advice; 
+
+    switch (weather) {
+        case "sunny":
+            advice = "Wear sunglasses and sunscreen!";
+            break;
+        case "rainy":
+            advice = "Take an umbrella!";
+            break;
+        case "snowy":
+            advice = "Wear a warm coat and boots!";
+            break;
+        case "cloudy":
+            advice = "It might rain, take a light jacket!";
+            break;
+        default:
+            advice = "Please select a weather condition from the list.";
+    }
+    document.getElementById("advice12").innerHTML = advice;
+}
+</script>
+</div>
+<br></br>
 </body>
 </html>
