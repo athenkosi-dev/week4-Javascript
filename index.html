@@ -126,6 +126,25 @@
             }
         </script>
 
+    </div>
+
+    <!--Lesson8-->
+    <div class="lesson">
+        <h2>Lesson8: Fuctions Return</h2>
+        <p><strong>Concept:</strong>Fuctions return to be used elsewhere .</p>
+
+        <button onclick="runlesson8()">Calculate and display Results</button>
+        <div class="output" id="addition8">Result will show here.</div>
+
+        <script>
+            function runlesson8() {
+                document.getElementById("addition8").innerHTML = "10 + 7 = " + addNumberReturn(10, 7);
+            }
+            function addNumberReturn(num1, num2) {
+                return num1 + num2;
+            }
+        </script>
+
 
 </body>
 </html>

@@ -59,6 +59,11 @@
         .var-card { background: #fff3cd; }
         .let-card { background: #d4edda; }
         .const-card { background: #cce7ff; }
+        .practice-scenario {
+            margin: 15px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
     </style>
 </head>
 <body>
@@ -233,12 +238,7 @@
         </script>
     </div>
 
-    <!-- INTERACTIVE PRACTICE -->
-    <div class="container">
-        <h3>🎮 Practice: What Should You Use?</h3>
-        <p>For each scenario, what should you use?</p>
-        
-        <div style="margin: 15px 0; padding: 10px; border: 1px solid #ccc;">
+        <div class="practice-scenario">
             <strong>Scenario 1:</strong> Store a user's name that won't change during the page visit
             <br>
             <button onclick="answer1('const')">const</button>
@@ -247,7 +247,7 @@
             <div id="answer1Result"></div>
         </div>
         
-        <div style="margin: 15px 0; padding: 10px; border: 1px solid #ccc;">
+        <div class="practice-scenario">
             <strong>Scenario 2:</strong> Count how many times a button is clicked
             <br>
             <button onclick="answer2('const')">const</button>
@@ -256,9 +256,14 @@
             <div id="answer2Result"></div>
         </div>
         
-        <div style="margin: 15px 0; padding: 10px; border: 1px solid #ccc;">
+        <div class="practice-scenario">
             <strong>Scenario 3:</strong> Store the title of your website
             <br>
+            <button onclick="answer3('const')">const</button>
+            <button onclick="answer3('let')">let</button>
+            <button onclick="answer3('var')">var</button>
+            <div id="answer3Result"></div>
+        </div>
             <button onclick="answer3('const')">const</button>
             <button onclick="answer3('let')">let</button>
             <button onclick="answer3('var')">var</button>
