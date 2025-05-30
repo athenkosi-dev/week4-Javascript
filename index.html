@@ -206,10 +206,48 @@
     </script>
    </form>
 
+<!--Lesson 11-->
+<div class"lesson>
+    <h2>Lesson 11:    </h2>
+    <p><strong>Concept:</strong>Complete login verification with functions.</p>
+    <p><em>Try username: AppAcademy, password:12@xademy</em></p>
 
+    <form>
+       
+    </form>
 
+    <div class="output" id="message11">Enter username and password, then click button</div>
 
+    <form>
+        <label for="usernameInput11">Username:</label>
+        <input type="text" id="usernameInput11" /> <br /><br />
+        
+        <label for="passwordInput11">Password:</label>
+        <input type="password" id="passwordInput11"/> <br><br />
+
+        <button type="button"onclick="verify11()">Verify Login</button>
+
+    </form>
+<div class="output" id="message11">Enter username and password, then click button</div>
+
+<script>
+    function verify11() {
+        var username = document.getElementById("usernameInput11").value;
+        var password = document.getElementById("passwordInput11").value;
+        checkUserCreds(username, password);
+    }
+
+    function checkUserCreds(username, password) {
+        var adminUsername = "AppAcademy";
+        var adminPassword = "12@xademy";
+
+        if (username === adminUsername && password === adminPassword) {
+            document.getElementById("message11").innerHTML = "Correct. Logging in...";
+        } else {
+            document.getElementById("message11").innerHTML = "Incorrect username or password";
+        }
+    }
+</script>
 
 </body>
-
-</body></html>
+</html>
