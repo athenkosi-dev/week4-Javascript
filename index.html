@@ -282,5 +282,32 @@ function getWeatherAdvice() {
 </script>
 </div>
 <br></br>
+<!--Lesson 13-->
+<div class="lesson">
+    <h2>Lesson 13: Numbers and strings Part1.</h2>
+    <p><strong>Concept:</strong>Understanding how JavaScript handles texts vs numbers</p>
+
+    <button type="button" onclick="demonstrateStringNumber()">Show string vs Numbers</button>
+    <div class="output" id="stringNumberOutput">Click to see the difference between strings and numbers.</div>
+
+    <script>
+        function demonstrateStringNumber() {
+            var numberA = 5;
+            var numberB = 3;
+            var StringA = "5";
+            var StringB = "3";
+
+            document.getElementById("stringNumberOutput").innerHTML =
+                "number addition: " + numberA + " + " + numberB + " = " + (numberA + numberB) + "<br>" +
+                "string concatenation: " + StringA + " + " + StringB + " = " + (StringA + StringB) + "<br>" +
+                "mixed: " + numberA + " + " + StringB + " = " + (numberA + StringB) + "<br>";
+        }
+    </script>
+</div>
+
+
+
+    </stript>
+
 </body>
 </html>
