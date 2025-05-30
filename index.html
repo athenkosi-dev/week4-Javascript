@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FNB App Academy - JS Week4</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>Javascript Week 4</h1>
     <!--Lesson1-->
@@ -30,14 +32,14 @@
         <p id="text2">More text here</p>
         <button onclick="lesson2()">Use Variables</button>
         <script>
-            function lesson2(){
-                var message1 ="Hello everyone!";
+            function lesson2() {
+                var message1 = "Hello everyone!";
                 var message2 = "I love JavaScript!";
                 var message3 = "its awesome!";
 
                 document.getElementById("heading2").innerHTML = message1;
                 document.getElementById("text2").innerHTML = message2 + " " + message3;
-                
+
             }
         </script>
     </div>
@@ -50,14 +52,14 @@
         <button onclick="lesson3()">Do Math</button>
 
         <script>
-            function lesson3(){
+            function lesson3() {
                 var num1 = 7;
                 var num2 = 10;
-                document.getElementById("math").innerHTML =num1 + " x " + num2 + " = " + (num1 * num2) ;
+                document.getElementById("math").innerHTML = num1 + " x " + num2 + " = " + (num1 * num2);
             }
         </script>
     </div>
-        </script>
+    </script>
     </div>
 
     <!--Lesson4-->
@@ -76,13 +78,13 @@
                 } else {
                     result.innerHTML = "Password is incorrect!";
                 }
-            }   
-                
+            }
+
         </script>
     </div>
-    
+
     <!--Lesson5-->
-<div class="lesson5"Click event>
+    <div class="lesson5" Click event>
 
         <h2 onclick="this.innerHTML='is awesome' ">JavaScript</h2>
         <p>Click on the word "JavaScript"above.</p>
@@ -90,21 +92,21 @@
 
     <!--Lesson6-->
     <div class="lesson">
-     <h3>Lesson6: Toggle Fuctions</h3>
+        <h3>Lesson6: Toggle Fuctions</h3>
 
-     <h2 id="toggleText" onclick="toggleText()">JavaScript</h2>
-     <p>Click repeatedly to toggle!</p>
+        <h2 id="toggleText" onclick="toggleText()">JavaScript</h2>
+        <p>Click repeatedly to toggle!</p>
 
-     <script>
-        function toggleText() {
-            var toggle =document.getElementById("toggleText");
-            if (toggle.innerHTML === "JavaScript") {
-                toggle.innerHTML = "is awesome";
-            } else {
-                toggle.innerHTML = "JavaScript";
+        <script>
+            function toggleText() {
+                var toggle = document.getElementById("toggleText");
+                if (toggle.innerHTML === "JavaScript") {
+                    toggle.innerHTML = "is awesome";
+                } else {
+                    toggle.innerHTML = "JavaScript";
+                }
             }
-        }
-     </script>
+        </script>
     </div>
 
     <!--Lesson7-->
@@ -114,7 +116,7 @@
         <button onclick="lesson7()">Click to see numbers</button>
         <p><strong>Concept</strong>:Passing data into fuctions</p>
 
-    
+
         <button onclick="addNumber(10, 7)">Add 10 + 7</button>
         <button onclick="addNumber(27, 18)">Add 27 + 18</button>
         <button onclick="addNumber(1245, 562)">Add 1245 + 562</button>
@@ -144,7 +146,37 @@
                 return num1 + num2;
             }
         </script>
+    </div>
 
+    <!--Lesson9-->
+    <div class="lesson">
+        <h2>Lesson9: Variables Scopes</h2>
+        <p><strong>Concept:</strong>Understanding where variables can be used.</p>
+        <button type="button" onclick="demostrateLocalScope()">Demostrate Local Scope.</button>
+        <button type="button" onclick="demostrateScope()">Demostrate Variable Scope.</button>
+       
+        <div class="output" id="scopeOutput">Click button to see variables in action.</div>
+
+        <script>
+          var globalvariable = "I am a global variable!";
+
+          function demostrateScope() {
+            var localvariable = "I am a local variable!";
+            var innerVariable = "I am an inner variable!";
+            document.getElementById("scopeOutput").innerHTML = 
+              globalvariable + "<br>" +
+              localvariable + "<br>" +
+              innerVariable + "<br>" +
+              "Local variables only exist inside their function!";
+          }
+
+          function demostrateLocalScope() {
+            var localvariable = "I am a local variable!";
+            document.getElementById("scopeOutput").innerHTML = localvariable;
+          }
+        </script>
+    </div>
 
 </body>
-</html>
+
+</body></html>
