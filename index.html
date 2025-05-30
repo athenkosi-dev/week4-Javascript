@@ -154,165 +154,165 @@
         <p><strong>Concept:</strong>Understanding where variables can be used.</p>
         <button type="button" onclick="demostrateLocalScope()">Demostrate Local Scope.</button>
         <button type="button" onclick="demostrateScope()">Demostrate Variable Scope.</button>
-       
+
         <div class="output" id="scopeOutput">Click button to see variables in action.</div>
 
         <script>
-          var globalvariable = "I am a global variable!";
+            var globalvariable = "I am a global variable!";
 
-          function demostrateScope() {
-            var localvariable = "I am a local variable!";
-            var innerVariable = "I am an inner variable!";
-            document.getElementById("scopeOutput").innerHTML = 
-              globalvariable + "<br>" +
-              localvariable + "<br>" +
-              innerVariable + "<br>" +
-              "Local variables only exist inside their function!";
-          }
+            function demostrateScope() {
+                var localvariable = "I am a local variable!";
+                var innerVariable = "I am an inner variable!";
+                document.getElementById("scopeOutput").innerHTML =
+                    globalvariable + "<br>" +
+                    localvariable + "<br>" +
+                    innerVariable + "<br>" +
+                    "Local variables only exist inside their function!";
+            }
 
-          function demostrateLocalScope() {
-            var localvariable = "I am a local variable!";
-            document.getElementById("scopeOutput").innerHTML = localvariable;
-          }
+            function demostrateLocalScope() {
+                var localvariable = "I am a local variable!";
+                document.getElementById("scopeOutput").innerHTML = localvariable;
+            }
         </script>
     </div>
     <br></br>
     <!--Lesson10-->
-   <div class="lesson10">
-   <h2>Lesson 10: Mini Project - login form part 1</h2>
-   <p><strong>Concept:</strong>Getting user input from form elements.</p>
-   <form>
-    <label for ="username">Username:</label>
-    <input type="text" id="usernameInput10"/> <br><br>
-    <label for="passwordInput10">Password:</label>
-    <input type="password" id="passwordInput10"/> <br><br>
+    <div class="lesson10">
+        <h2>Lesson 10: Mini Project - login form part 1</h2>
+        <p><strong>Concept:</strong>Getting user input from form elements.</p>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="usernameInput10" /> <br><br>
+            <label for="passwordInput10">Password:</label>
+            <input type="password" id="passwordInput10" /> <br><br>
 
-    <button type="button" onclick="verify10()">Get Input values</button>
-   </form>
+            <button type="button" onclick="verify10()">Get Input values</button>
+        </form>
 
-    <div class="output" id="message10">Enter username and password, then click button</div>
+        <div class="output" id="message10">Enter username and password, then click button</div>
 
 
-    <script>
-        function verify10(){
-            var username = document.getElementById("usernameInput10").value;
-            var password = document.getElementById("passwordInput10").value;
-     
-            document.getElementById("message10").innerHTML = `Username entered: ${username}<br>Password: ${password}`;
+        <script>
+            function verify10() {
+                var username = document.getElementById("usernameInput10").value;
+                var password = document.getElementById("passwordInput10").value;
 
-        }
-    </script>
-   </form>
-   </div>
-   <br></br>
-<!--Lesson 11-->
-<div class="lesson">
-    <h2>Lesson 11:    </h2>
-    <p><strong>Concept:</strong>Complete login verification with functions.</p>
-    <p><em>Try username: AppAcademy, password:12@xademy</em></p>
+                document.getElementById("message10").innerHTML = `Username entered: ${username}<br>Password: ${password}`;
 
-    <form>
-        <label for="usernameInput11">Username:</label>
-        <input type="text" id="usernameInput11" /> <br /><br />
-        
-        <label for="passwordInput11">Password:</label>
-        <input type="password" id="passwordInput11"/> <br><br />
+            }
+        </script>
+        </form>
+    </div>
+    <br></br>
+    <!--Lesson 11-->
+    <div class="lesson">
+        <h2>Lesson 11: </h2>
+        <p><strong>Concept:</strong>Complete login verification with functions.</p>
+        <p><em>Try username: AppAcademy, password:12@xademy</em></p>
 
-        <button type="button"onclick="verify11()">Verify Login</button>
-    </form>
-    <div class="output" id="message11">Enter username and password, then click button</div>
+        <form>
+            <label for="usernameInput11">Username:</label>
+            <input type="text" id="usernameInput11" /> <br /><br />
 
-<script>
-    function verify11() {
-        var username = document.getElementById("usernameInput11").value;
-        var password = document.getElementById("passwordInput11").value;
-        checkUserCreds(username, password);
-    }
+            <label for="passwordInput11">Password:</label>
+            <input type="password" id="passwordInput11" /> <br><br />
 
-    function checkUserCreds(username, password) {
-        var adminUsername = "AppAcademy";
-        var adminPassword = "12@xademy";
+            <button type="button" onclick="verify11()">Verify Login</button>
+        </form>
+        <div class="output" id="message11">Enter username and password, then click button</div>
 
-        if (username === adminUsername && password === adminPassword) {
-            document.getElementById("message11").innerHTML = "Correct. Logging in...";
-        } else {
-            document.getElementById("message11").innerHTML = "Incorrect username or password";
-        }
-    }
-</script>
-</div>
-<br></br>
-<!--Lesson 12-->
-<div class="lesson">
-<h2>Lesson 12: The SWITCH statement</h2>
-<p><strong>Concept:</strong>Using SWITCH for multiple conditions</p>
+        <script>
+            function verify11() {
+                var username = document.getElementById("usernameInput11").value;
+                var password = document.getElementById("passwordInput11").value;
+                checkUserCreds(username, password);
+            }
 
-<label for="weather12">select weather</label>
-<select id="weather12">
-    <option value="sunny">Sunny</option>
-    <option value="rainy">Rainy</option>
-    <option value="snowy">Snowy</option>
-    <option value="cloudy">Cloudy</option>
-    </select>
-    <button onclick="getWeather()">Get Advice</button>
-    <div class="output" id="advice12">Select weather and click for advice </div>
-<script>
-function getWeatherAdvice() {
-    var weather = document.getElementById("weather12").value;
-    let advice; 
+            function checkUserCreds(username, password) {
+                var adminUsername = "AppAcademy";
+                var adminPassword = "12@xademy";
 
-    switch (weather) {
-        case "sunny":
-            advice = "Wear sunglasses and sunscreen!";
-            break;
-        case "rainy":
-            advice = "Take an umbrella!";
-            break;
-        case "snowy":
-            advice = "Wear a warm coat and boots!";
-            break;
-        case "cloudy":
-            advice = "It might rain, take a light jacket!";
-            break;
-        default:
-            advice = "Please select a weather condition from the list.";
-    }
-    document.getElementById("advice12").innerHTML = advice;
-}
-</script>
-</div>
-<br></br>
-<!--Lesson 13-->
-<div class="lesson">
-    <h2>Lesson 13: Numbers and strings Part1.</h2>
-    <p><strong>Concept:</strong>Understanding how JavaScript handles texts vs numbers</p>
+                if (username === adminUsername && password === adminPassword) {
+                    document.getElementById("message11").innerHTML = "Correct. Logging in...";
+                } else {
+                    document.getElementById("message11").innerHTML = "Incorrect username or password";
+                }
+            }
+        </script>
+    </div>
+    <br></br>
+    <!--Lesson 12-->
+    <div class="lesson">
+        <h2>Lesson 12: The SWITCH statement</h2>
+        <p><strong>Concept:</strong>Using SWITCH for multiple conditions</p>
 
-    <button type="button" onclick="demonstrateStringNumber()">Show string vs Numbers</button>
-    <div class="output" id="stringNumberOutput">Click to see the difference between strings and numbers.</div>
+        <label for="weather12">select weather</label>
+        <select id="weather12">
+            <option value="sunny">Sunny</option>
+            <option value="rainy">Rainy</option>
+            <option value="snowy">Snowy</option>
+            <option value="cloudy">Cloudy</option>
+        </select>
+        <button onclick="getWeather()">Get Advice</button>
+        <div class="output" id="advice12">Select weather and click for advice </div>
+        <script>
+            function getWeatherAdvice() {
+                var weather = document.getElementById("weather12").value;
+                let advice;
 
-    <script>
-        function demonstrateStringNumber() {
-            var numberA = 5;
-            var numberB = 3;
-            var StringA = "5";
-            var StringB = "3";
+                switch (weather) {
+                    case "sunny":
+                        advice = "Wear sunglasses and sunscreen!";
+                        break;
+                    case "rainy":
+                        advice = "Take an umbrella!";
+                        break;
+                    case "snowy":
+                        advice = "Wear a warm coat and boots!";
+                        break;
+                    case "cloudy":
+                        advice = "It might rain, take a light jacket!";
+                        break;
+                    default:
+                        advice = "Please select a weather condition from the list.";
+                }
+                document.getElementById("advice12").innerHTML = advice;
+            }
+        </script>
+    </div>
+    <br></br>
+    <!--Lesson 13-->
+    <div class="lesson">
+        <h2>Lesson 13: Numbers and strings Part1.</h2>
+        <p><strong>Concept:</strong>Understanding how JavaScript handles texts vs numbers</p>
 
-            document.getElementById("stringNumberOutput").innerHTML =
-                "number addition: " + numberA + " + " + numberB + " = " + (numberA + numberB) + "<br>" +
-                "string concatenation: " + StringA + " + " + StringB + " = " + (StringA + StringB) + "<br>" +
-                "mixed: " + numberA + " + " + StringB + " = " + (numberA + StringB) + "<br>";
-        }
-    </script>
-</div>
-  <!-- Lesson 14 -->
-     <div class="lesson">
+        <button type="button" onclick="demonstrateStringNumber()">Show string vs Numbers</button>
+        <div class="output" id="stringNumberOutput">Click to see the difference between strings and numbers.</div>
+
+        <script>
+            function demonstrateStringNumber() {
+                var numberA = 5;
+                var numberB = 3;
+                var StringA = "5";
+                var StringB = "3";
+
+                document.getElementById("stringNumberOutput").innerHTML =
+                    "number addition: " + numberA + " + " + numberB + " = " + (numberA + numberB) + "<br>" +
+                    "string concatenation: " + StringA + " + " + StringB + " = " + (StringA + StringB) + "<br>" +
+                    "mixed: " + numberA + " + " + StringB + " = " + (numberA + StringB) + "<br>";
+            }
+        </script>
+    </div>
+    <!-- Lesson 14 -->
+    <div class="lesson">
         <h2>Lesson 14: Numbers and Strings Part 2 - Converting Text to Numbers</h2>
         <p><strong>Concept:</strong> Converting string input to numbers for calculations</p>
 
         <input type="text" id="textNumber1" placeholder="Enter first number" value="10">
         <input type="text" id="textNumber2" placeholder="Enter second number" value="5">
         <button onclick="convertAndAdd()">Convert and Add</button>
-        <div class="output" id="conversionOutput">Enter 
+        <div class="output" id="conversionOutput">Enter
             numbers and click to see conversion in action</div>
 
         <script>
@@ -326,7 +326,7 @@ function getWeatherAdvice() {
                 //With conversion (number addition)
                 var numberResult = parseInt(input1) + parseInt(input2);
 
-                document.getElementById("conversionOutput").innerHTML = 
+                document.getElementById("conversionOutput").innerHTML =
                     "Without conversion: " + stringResult + "<br>" +
                     "With conversion: " + numberResult;
             }
@@ -335,16 +335,16 @@ function getWeatherAdvice() {
     <br></br>
 
     <!-- Lesson 15 -->
-     <div class="lesson">
+    <div class="lesson">
         <h2>Lesson 15: Numbers and Strings Part 3 - Avoiding Conversion Errors</h2>
         <p><strong>Concept:</strong> Handling conversion errors and invalid input</p>
 
         <input type="text" id="safeInput1" placeholder="Enter first number">
         <input type="text" id="safeInput2" placeholder="Enter second number">
         <button onclick="safeConvertAndAdd()">Safe Convert and Add</button>
-        <div class="output" id="safeOutput">Try entering both number and non-numbers 
+        <div class="output" id="safeOutput">Try entering both number and non-numbers
             for error handling</div>
-        
+
         <script>
             function safeConvertAndAdd() {
                 var input1 = document.getElementById("safeInput1").value;
@@ -354,18 +354,19 @@ function getWeatherAdvice() {
                 var num2 = parseInt(input2);
 
                 if (isNaN(num1) || isNaN(num2)) {
-                    document.getElementById("safeOutput").innerHTML = 
+                    document.getElementById("safeOutput").innerHTML =
                         "Error: Please enter valid numbers only!<br>" +
                         "Input 1: '" + input1 + "' → " + (isNaN(num1) ? "Invalid" : "Valid") + "<br>" +
                         "Input 2: '" + input2 + "' → " + (isNaN(num2) ? "Invalid" : "Valid");
                 } else {
-                    document.getElementById("safeOutput").innerHTML = 
+                    document.getElementById("safeOutput").innerHTML =
                         "Success! " + num1 + " + " + num2 + " = " + (num1 + num2)
                 }
             }
 
 
         </script>
-     </div>
+    </div>
 </body>
+
 </html>
