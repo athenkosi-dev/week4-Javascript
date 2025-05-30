@@ -177,6 +177,39 @@
         </script>
     </div>
 
+
+
+    <!--Lesson10-->
+   <div class="lesson10">
+   <h2>Lesson 10: Mini Project - login form part 1</h2>
+   <p><strong>Concept:</strong>Getting user input from form elements.</p>
+   <form>
+    <label for ="username">Username:</label>
+    <input type="text" id="usernameInput10"/> <br><br>
+    <label for="passwordInput10">Password:</label>
+    <input type="password" id="passwordInput10"/> <br><br>
+
+    <button type="button" onclick="verify10()">Get Input values</button>
+   </form>
+
+    <div class="output" id="message10">Enter username and password, then click button</div>
+
+
+    <script>
+        function verify10(){
+            var username = document.getElementById("usernameInput10").value;
+            var password = document.getElementById("passwordInput10").value;
+     
+            document.getElementById("message10").innerHTML = `Username entered: ${username}<br>Password: ${password}`;
+
+        }
+    </script>
+   </form>
+
+
+
+
+
 </body>
 
 </body></html>
